@@ -1,0 +1,13 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <extensionMap>
+      <mapping pattern="updateItemForm" type="AUTO_DETECTED" />
+      <mapping pattern="memberList.html" type="AUTO_DETECTED" />
+      <mapping pattern="asd" type="AUTO_DETECTED" />
+      <mapping pattern="Main" type="AUTO_DETECTED" />
+      <mapping pattern="memberList" type="Native" />
+      <removed_mapping ext="apk" approved="true" type="ARCHIVE" />
+      <removed_mapping ext="psd" approved="true" type="Image" />
+    </extensionMap>
+  </component>
+</application>
