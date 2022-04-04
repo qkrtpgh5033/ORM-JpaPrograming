@@ -8,9 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
-public class Item {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DTYPE")
+@Getter @Setter
+public abstract class Item extends BaseEntity{
 
     @Id
     @GeneratedValue

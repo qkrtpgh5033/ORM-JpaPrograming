@@ -1,3 +1,5 @@
+import jpabook.jpashop.domain.Book;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -14,14 +16,19 @@ public class JpaMain {
          * 모든 데이터 변경은 "트랜잭션이 필요"
          */
         EntityTransaction transaction = em.getTransaction();
+//        transaction.begin();
 
         //code
         try{
 
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("김영한");
+            em.persist(book);
 
-//            transaction.commit();
+            transaction.commit();
         }catch (Exception e){
-            System.out.println("오류 내용" + e);
+            e.printStackTrace();
             transaction.rollback();
         }finally {
             em.close();
